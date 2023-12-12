@@ -6,17 +6,17 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "docu-notion sample site",
-  tagline: "",
-  url: "https://sillsdev.github.io",
-  baseUrl: "/docu-notion-sample-site/",
+  title: "KIRA | Docs",
+  tagline: "Public documentation of the KIRA network",
+  url: "https://docs.kira.network",
+  baseUrl: "/root/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "https://ipfs.kira.network/ipfs/QmRqfyEvBoSj6sapjyhQqTJfwQPmsDkMQrxyqtTC6bZcTU",
 
-  organizationName: "sillsdev", // Usually your GitHub org/user name.
-  projectName: "docu-notion-sample-site", // Usually your repo name.
-  deploymentBranch: "gh-pages",
+  organizationName: "kira.network", // Usually your GitHub org/user name.
+  projectName: "docs.kira.network", // Usually your repo name.
+  deploymentBranch: "dev",
 
   presets: [
     [
@@ -73,7 +73,7 @@ const config = {
       metadata: [
         {
           name: "keywords",
-          content: "Bloom, SIL, documentation, help, training",
+          content: "Kira Network, KEX, KEK, documentation, help, INTERX, MIRO, KIRA, SEKAI",
         },
       ],
       sitemap: {
@@ -83,10 +83,10 @@ const config = {
         ignorePatterns: [],
       },
       navbar: {
-        title: "Sample Docusaurus Site using docu-notion",
+        title: "KIRA | Docs test",
         logo: {
           alt: "Logo",
-          src: "img/logo.svg",
+          src: "https://ipfs.kira.network/ipfs/QmRqfyEvBoSj6sapjyhQqTJfwQPmsDkMQrxyqtTC6bZcTU",
         },
 
         items: [
