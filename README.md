@@ -1,19 +1,19 @@
-# Description
-This repo creates KIRA Network's documentation. It uses [docu-notion-kira](https://github.com/kmlbgn/docu-notion-kira) to fetchs content from KIRA's Notion workspace and feeds the output to Docusaurus, a markdown-to-static-html generator.
+# KIRA Network Documentation Repository
 
-# How It Works ?
+This repository is responsible for creating the documentation for KIRA Network. It leverages docu-notion-kira to extract content from KIRA's Notion workspace using the Notion API. The content is then transformed into Markdown format and integrated into Docusaurus v3, which generates static HTML files from Markdown.
 
-The system fetches content from a Notion root page which operates with two main components:
+## Release Workflow: Notion Pages to IPFS
 
-1. **The Database (Optional)** - This is where the documentation pages are stored. They include content and are equipped with workflow properties to facilitate a Kanban-style management process where pages can have metadata that can be leveraged and are published according to their ‘status’.
-2. **The Outline Page (Mandatory)** - This is a central Notion page that organizes content hierarchically. It serves as the foundation of the documentation structure. The arrangement of sub-pages within the Outline is directly reflected in the final documentation site and its sidebar navigation. These sub-pages should link back to the relevant documents housed in the database.
+- A custom Docker image with Chromedriver preinstalled is initialized.
+- The docu-notion-kira tool is installed. It converts KIRA's Notion documentation pages into MDX format.
+- Docusaurus is set up using docusaurus.config.js to generate HTML from the docu-notion-kira output in the ./build directory.
+- Our custom IPFS API tool interacts with Pinata to pin the content of the ./dist/notion folder.
+- The ./dist/notion folder, along with the CID hash in ./ipfs-cid.txt, is pushed to a dedicated repository. The push uses the format <branch>-release.
+- A simple HTML page utilizes <branch>-release/ipfs-cid.txt to locate the IPFS-hosted page, allowing user redirection via a DNS name.
 
-### **Page Structure in the Outline**
+## How to Use This Repository
 
-Each page listed under the Outline page is expected to be only one of the following type:
-
-- sub-pages (a page containing others pages with content and/or sub-pages)
-- symbolic links to other pages of the database (if the database is utilized)
-- or standard page with content
-    
-    The use of the database is optional because pages with content can be directly included in the Outline. However, these pages won't have access to the advanced workflow features provided by the database integration. Sub-pages function as subsections of the documentation. They are transformed into dropdown menus in the sidebar of the documentation site. Due to this structural role, sub-pages cannot hold content themselves (which won’t be displayed), they are only meant to organize the documentation and provide navigation to more detailed content contained in linked or nested pages.
+- Make a commit to the dev branch.
+- Push the changes and await the completion of GitHub Actions.
+GitHub Actions will publish the results to IPFS and provide a demo link in the comments of the automatically created pull request (PR).
+- Review the IPFS demo. If satisfactory, merge the PR into the master branch.
