@@ -15,8 +15,8 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "https://ipfs.kira.network/ipfs/QmRqfyEvBoSj6sapjyhQqTJfwQPmsDkMQrxyqtTC6bZcTU",
 
-  organizationName: "KiraCore", // Usually your GitHub org/user name.
-  projectName: "KiraCore", // Usually your repo name.
+  organizationName: "kmlbgn", // Usually your GitHub org/user name.
+  projectName: "docs.kira.network", // Usually your repo name.
   deploymentBranch: "gh-pages", // Usually gh-pages (Github default).
 
   presets: [
