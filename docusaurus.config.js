@@ -17,7 +17,7 @@ const config = {
 
   organizationName: "KiraCore", // Usually your GitHub org/user name.
   projectName: "KiraCore", // Usually your repo name.
-  deploymentBranch: "dev",
+  deploymentBranch: "gh-pages", // Usually gh-pages (Github default).
 
   presets: [
     [
