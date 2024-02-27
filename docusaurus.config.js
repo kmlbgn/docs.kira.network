@@ -7,7 +7,7 @@ const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "KIRA | Docs",
+  title: "KIRA",
   tagline: "Public documentation of the KIRA network",
   url: "https://docs.kira.network",
   baseUrl: "/docs.kira.network/",
@@ -82,7 +82,7 @@ const config = {
       metadata: [
         {
           name: "keywords",
-          content: "Kira Network, KEX, KEK, documentation, help, INTERX, MIRO, KIRA, SEKAI",
+          content: "Kira Network, KEX, documentation, help, INTERX, MIRO, KIRA, SEKAI",
         },
       ],
       sitemap: {
@@ -92,10 +92,10 @@ const config = {
         ignorePatterns: [],
       },
       navbar: {
-        title: "KIRA | Docs test",
+        //title: "KIRA | Docs test",
         logo: {
           alt: "Logo",
-          src: "https://ipfs.kira.network/ipfs/QmRqfyEvBoSj6sapjyhQqTJfwQPmsDkMQrxyqtTC6bZcTU",
+          src: "https://ipfs.kira.network/ipfs/QmcNyQRYDBD6qBH19Ab7eqtWZ59nLqBjvM4BCwnkexd78y/LOGO-SYMBOL/KIRA-WT-V2.svg",
         },
 
         items: [
@@ -127,6 +127,11 @@ const config = {
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 4,
+      },
+
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
       },
 
       prism: {
