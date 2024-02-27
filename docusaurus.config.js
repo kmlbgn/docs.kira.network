@@ -24,7 +24,7 @@ const config = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          path: 'tabs/docs/', 
+          path: 'tabs/learn/', 
           routeBasePath: '/',
           remarkPlugins: [require('remark-math')],
           rehypePlugins: [require('rehype-katex')],
@@ -45,7 +45,7 @@ const config = {
       {
         id: 'docs',
         path: 'tabs/Docs',
-        routeBasePath: '/',
+        routeBasePath: '/docs/',
         sidebarPath: undefined,
         remarkPlugins: [require('remark-math')],
         rehypePlugins: [require('rehype-katex')],
@@ -56,7 +56,7 @@ const config = {
       {
         id: 'learn',
         path: 'tabs/Learn',
-        routeBasePath: '/learn/',
+        routeBasePath: '/',
         sidebarPath: undefined,
         remarkPlugins: [require('remark-math')],
         rehypePlugins: [require('rehype-katex')],
@@ -139,13 +139,13 @@ const config = {
           },
           {
             label: 'Docs',
-            to: '/',
+            to: '/docs/',
             position: 'left',
             // activeBaseRegex: '^/docs/',
           },
           {
             label: 'Learn',
-            to: '/learn/',
+            to: '/',
             position: 'left',
           },
           {
