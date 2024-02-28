@@ -83,24 +83,24 @@ const config = {
       crossorigin: 'anonymous',
     },
   ],
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
-    localeConfigs: {
-      en: {
-        label: "English",
-        direction: "ltr",
-        htmlLang: "en-US",
-        calendar: "gregory",
-      },
-    },
-  },
+  // Langage options
+  // i18n: {
+  //   defaultLocale: "en",
+  //   locales: ["en"],
+  //   localeConfigs: {
+  //     en: {
+  //       label: "English",
+  //       direction: "ltr",
+  //       htmlLang: "en-US",
+  //       calendar: "gregory",
+  //     },
+  //   },
+  // },
   themes: [
     // ... Your other themes.
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
-        // ... Your options.
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
         // language: ["en", "fr"],
@@ -133,30 +133,34 @@ const config = {
         },
 
         items: [
-          {
-            type: "localeDropdown",
-            position: "right",
-          },
+          // Langage selection dropdown menu
+          // {
+          //   type: "localeDropdown",
+          //   position: "right",
+          // },
           {
             label: 'Docs',
             to: '/docs/',
             position: 'left',
-            // activeBaseRegex: '^/docs/',
+            activeBaseRegex: '^/docs.kira.network/docs/',
           },
           {
             label: 'Learn',
             to: '/',
             position: 'left',
+            activeBaseRegex: '^/docs.kira.network/',
           },
           {
             label: 'Testnet',
             to: '/testnet/',
             position: 'left',
+            activeBaseRegex: '^/docs.kira.network/testnet/',
           },
           {
             label: 'Links',
             to: '/links/',
-            position: 'right',            
+            position: 'right',   
+            activeBaseRegex: '^/docs.kira.network/links/',         
           },
         ],
       },
